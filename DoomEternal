@@ -1,0 +1,21 @@
+ public class Monsters {
+        public static void main(String[] args) {
+
+
+
+        DoomSlayer Doomslayer69 = new DoomSlayer("Doomslayer69");
+        DoomSlayer Doomslayer420 = new DoomSlayer("Doomslayerpink"); 
+        DemonKillcount counter = new DemonKillcount(23);
+        DemonKillcount counter1 = new DemonKillcount(33);
+
+        Demon Zombie = new Demon("Zombie", 10, 20, Doomslayer69,  counter );
+        Zombie.DoomSlayerStatus();
+        
+        
+        Demon Pinky = new Demon("Pinky", 30, 40, Doomslayer420, counter1);
+        Pinky.DoomSlayerStatus();
+
+      
+        
+    }
+    }   
