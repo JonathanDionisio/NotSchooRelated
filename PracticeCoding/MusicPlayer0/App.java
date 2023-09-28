@@ -19,16 +19,23 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import java.io.IOException;
 
-public class App extends Application {
-	
-	@Override
-	public void start(Stage stage) throws IOException {
-       
-		Parent root = FXMLLoader.load(getClass().getResource("MusicAppView.fxml"));
-		Scene scene = new Scene(root);
-		stage.setScene(scene);
-		stage.show();
-		
-	}
+public class App extends Application  {
+public static void main(String[] args) {
 
+      launch(args);
+    }
+	public void start(Stage stage) throws Exception {
+
+        try {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("MusicAppView.fxml"));
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show(); 
+            stage.setResizable(false);
+            
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
